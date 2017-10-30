@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  GorillaQuestion16
 //
 //  Created by Pablo Segura on 10/30/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class TimerViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

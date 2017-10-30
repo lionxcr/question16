@@ -7,23 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A99756BB35845D3E2F71A02 /* Pods_GorillaQuestion16.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 782592BCDCA751B7B87F68D0 /* Pods_GorillaQuestion16.framework */; };
 		C57D15891FA7CCDC00DBFBF1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D15881FA7CCDC00DBFBF1 /* AppDelegate.swift */; };
-		C57D158B1FA7CCDC00DBFBF1 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D158A1FA7CCDC00DBFBF1 /* FirstViewController.swift */; };
-		C57D158D1FA7CCDC00DBFBF1 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D158C1FA7CCDC00DBFBF1 /* SecondViewController.swift */; };
+		C57D158B1FA7CCDC00DBFBF1 /* RecipeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D158A1FA7CCDC00DBFBF1 /* RecipeViewController.swift */; };
+		C57D158D1FA7CCDC00DBFBF1 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D158C1FA7CCDC00DBFBF1 /* TimerViewController.swift */; };
 		C57D15901FA7CCDC00DBFBF1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57D158E1FA7CCDC00DBFBF1 /* Main.storyboard */; };
 		C57D15921FA7CCDC00DBFBF1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C57D15911FA7CCDC00DBFBF1 /* Assets.xcassets */; };
 		C57D15951FA7CCDC00DBFBF1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C57D15931FA7CCDC00DBFBF1 /* LaunchScreen.storyboard */; };
+		C57D15A31FA7CD8F00DBFBF1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C57D15A21FA7CD8F00DBFBF1 /* Default-568h@2x.png */; };
+		C57D15B01FA7D4C600DBFBF1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D15AF1FA7D4C600DBFBF1 /* Constants.swift */; };
+		C57D15B21FA7D8B000DBFBF1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D15B11FA7D8B000DBFBF1 /* APIManager.swift */; };
+		C57D15B41FA7DC0A00DBFBF1 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D15B31FA7DC0A00DBFBF1 /* RecipeModel.swift */; };
+		C57D15B61FA7E96E00DBFBF1 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D15B51FA7E96E00DBFBF1 /* RecipeDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		782592BCDCA751B7B87F68D0 /* Pods_GorillaQuestion16.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GorillaQuestion16.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57D15851FA7CCDC00DBFBF1 /* GorillaQuestion16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GorillaQuestion16.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C57D15881FA7CCDC00DBFBF1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C57D158A1FA7CCDC00DBFBF1 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		C57D158C1FA7CCDC00DBFBF1 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		C57D158A1FA7CCDC00DBFBF1 /* RecipeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeViewController.swift; sourceTree = "<group>"; };
+		C57D158C1FA7CCDC00DBFBF1 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		C57D158F1FA7CCDC00DBFBF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C57D15911FA7CCDC00DBFBF1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C57D15941FA7CCDC00DBFBF1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C57D15961FA7CCDC00DBFBF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C57D15A21FA7CD8F00DBFBF1 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C57D15AE1FA7D11C00DBFBF1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C57D15AF1FA7D4C600DBFBF1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C57D15B11FA7D8B000DBFBF1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		C57D15B31FA7DC0A00DBFBF1 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		C57D15B51FA7E96E00DBFBF1 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		DB8721037DCE4C6A83532367 /* Pods-GorillaQuestion16.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaQuestion16.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaQuestion16/Pods-GorillaQuestion16.debug.xcconfig"; sourceTree = "<group>"; };
+		FE228385A72B3865C823C48E /* Pods-GorillaQuestion16.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaQuestion16.release.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaQuestion16/Pods-GorillaQuestion16.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +45,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A99756BB35845D3E2F71A02 /* Pods_GorillaQuestion16.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4A98869DF74F668E03D6ABC1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DB8721037DCE4C6A83532367 /* Pods-GorillaQuestion16.debug.xcconfig */,
+				FE228385A72B3865C823C48E /* Pods-GorillaQuestion16.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A90E89885CD1D0DE9B432847 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				782592BCDCA751B7B87F68D0 /* Pods_GorillaQuestion16.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C57D157C1FA7CCDC00DBFBF1 = {
 			isa = PBXGroup;
 			children = (
-				C57D15871FA7CCDC00DBFBF1 /* GorillaQuestion16 */,
+				C57D15A11FA7CD6F00DBFBF1 /* StoryBoards */,
+				C57D15A01FA7CD6100DBFBF1 /* Supporting Files */,
+				C57D159F1FA7CD5900DBFBF1 /* View Controllers */,
+				C57D159E1FA7CD5200DBFBF1 /* App Delegate */,
+				C57D159D1FA7CD4A00DBFBF1 /* Model */,
+				C57D159C1FA7CD3E00DBFBF1 /* API Manager */,
 				C57D15861FA7CCDC00DBFBF1 /* Products */,
+				4A98869DF74F668E03D6ABC1 /* Pods */,
+				A90E89885CD1D0DE9B432847 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -53,18 +92,58 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C57D15871FA7CCDC00DBFBF1 /* GorillaQuestion16 */ = {
+		C57D159C1FA7CD3E00DBFBF1 /* API Manager */ = {
+			isa = PBXGroup;
+			children = (
+				C57D15B11FA7D8B000DBFBF1 /* APIManager.swift */,
+			);
+			path = "API Manager";
+			sourceTree = "<group>";
+		};
+		C57D159D1FA7CD4A00DBFBF1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C57D15B31FA7DC0A00DBFBF1 /* RecipeModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		C57D159E1FA7CD5200DBFBF1 /* App Delegate */ = {
 			isa = PBXGroup;
 			children = (
 				C57D15881FA7CCDC00DBFBF1 /* AppDelegate.swift */,
-				C57D158A1FA7CCDC00DBFBF1 /* FirstViewController.swift */,
-				C57D158C1FA7CCDC00DBFBF1 /* SecondViewController.swift */,
-				C57D158E1FA7CCDC00DBFBF1 /* Main.storyboard */,
-				C57D15911FA7CCDC00DBFBF1 /* Assets.xcassets */,
-				C57D15931FA7CCDC00DBFBF1 /* LaunchScreen.storyboard */,
-				C57D15961FA7CCDC00DBFBF1 /* Info.plist */,
 			);
-			path = GorillaQuestion16;
+			path = "App Delegate";
+			sourceTree = "<group>";
+		};
+		C57D159F1FA7CD5900DBFBF1 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C57D158A1FA7CCDC00DBFBF1 /* RecipeViewController.swift */,
+				C57D15B51FA7E96E00DBFBF1 /* RecipeDetailsViewController.swift */,
+				C57D158C1FA7CCDC00DBFBF1 /* TimerViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		C57D15A01FA7CD6100DBFBF1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C57D15911FA7CCDC00DBFBF1 /* Assets.xcassets */,
+				C57D15AE1FA7D11C00DBFBF1 /* Info.plist */,
+				C57D15A21FA7CD8F00DBFBF1 /* Default-568h@2x.png */,
+				C57D15AF1FA7D4C600DBFBF1 /* Constants.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C57D15A11FA7CD6F00DBFBF1 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				C57D15931FA7CCDC00DBFBF1 /* LaunchScreen.storyboard */,
+				C57D158E1FA7CCDC00DBFBF1 /* Main.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +153,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C57D15991FA7CCDC00DBFBF1 /* Build configuration list for PBXNativeTarget "GorillaQuestion16" */;
 			buildPhases = (
+				2BDBE75F2C5EC50CAA8A8906 /* [CP] Check Pods Manifest.lock */,
 				C57D15811FA7CCDC00DBFBF1 /* Sources */,
 				C57D15821FA7CCDC00DBFBF1 /* Frameworks */,
 				C57D15831FA7CCDC00DBFBF1 /* Resources */,
+				5FEA729A02823388D17F7FC3 /* [CP] Embed Pods Frameworks */,
+				8684A3721DD8869B5A59188E /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,6 +209,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C57D15951FA7CCDC00DBFBF1 /* LaunchScreen.storyboard in Resources */,
+				C57D15A31FA7CD8F00DBFBF1 /* Default-568h@2x.png in Resources */,
 				C57D15921FA7CCDC00DBFBF1 /* Assets.xcassets in Resources */,
 				C57D15901FA7CCDC00DBFBF1 /* Main.storyboard in Resources */,
 			);
@@ -134,14 +217,72 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2BDBE75F2C5EC50CAA8A8906 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GorillaQuestion16-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5FEA729A02823388D17F7FC3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GorillaQuestion16/Pods-GorillaQuestion16-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GorillaQuestion16/Pods-GorillaQuestion16-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8684A3721DD8869B5A59188E /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GorillaQuestion16/Pods-GorillaQuestion16-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C57D15811FA7CCDC00DBFBF1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C57D158D1FA7CCDC00DBFBF1 /* SecondViewController.swift in Sources */,
+				C57D15B21FA7D8B000DBFBF1 /* APIManager.swift in Sources */,
+				C57D158D1FA7CCDC00DBFBF1 /* TimerViewController.swift in Sources */,
 				C57D15891FA7CCDC00DBFBF1 /* AppDelegate.swift in Sources */,
-				C57D158B1FA7CCDC00DBFBF1 /* FirstViewController.swift in Sources */,
+				C57D15B61FA7E96E00DBFBF1 /* RecipeDetailsViewController.swift in Sources */,
+				C57D158B1FA7CCDC00DBFBF1 /* RecipeViewController.swift in Sources */,
+				C57D15B01FA7D4C600DBFBF1 /* Constants.swift in Sources */,
+				C57D15B41FA7DC0A00DBFBF1 /* RecipeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,11 +417,13 @@
 		};
 		C57D159A1FA7CCDC00DBFBF1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DB8721037DCE4C6A83532367 /* Pods-GorillaQuestion16.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M34X7WP5AK;
-				INFOPLIST_FILE = GorillaQuestion16/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lionxDev.GorillaQuestion16;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -291,11 +434,13 @@
 		};
 		C57D159B1FA7CCDC00DBFBF1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FE228385A72B3865C823C48E /* Pods-GorillaQuestion16.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = M34X7WP5AK;
-				INFOPLIST_FILE = GorillaQuestion16/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.lionxDev.GorillaQuestion16;
 				PRODUCT_NAME = "$(TARGET_NAME)";
