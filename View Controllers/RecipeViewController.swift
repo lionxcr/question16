@@ -23,6 +23,7 @@ class RecipeViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         SwiftSpinner.show("Gethering recipies...")
         //Get Recipies
+        self.recipesArray.removeAllObjects()
         APIManager.shared.getRecipes()
     }
     
