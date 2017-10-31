@@ -17,14 +17,20 @@ class RecipeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Recipes"
         self.setupTableView()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.title = ""
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
-        SwiftSpinner.show("Gethering recipies...")
-        //Get Recipies
-        self.recipesArray.removeAllObjects()
-        APIManager.shared.getRecipes()
+        if self.recipesArray.count == 0{
+            SwiftSpinner.show("Gethering recipies...")
+            APIManager.shared.getRecipes()
+        }
+       
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,7 +52,7 @@ class RecipeViewController: UIViewController {
                         }
                         DispatchQueue.main.async {
                             self.recipeTableView.reloadData()
-                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2, execute: {
+                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1, execute: {
                                 SwiftSpinner.hide()
                             })
                             

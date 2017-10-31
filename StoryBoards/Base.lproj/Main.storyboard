@@ -19,7 +19,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zGy-KZ-RK1">
-                                <rect key="frame" x="0.0" y="74" width="375" height="544"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="RecipeCell" id="xyr-IY-HFi">
@@ -38,7 +38,7 @@
                             <constraint firstItem="zGy-KZ-RK1" firstAttribute="bottom" secondItem="PQr-Ze-W5v" secondAttribute="bottom" id="Bpt-dC-G9U"/>
                             <constraint firstItem="zGy-KZ-RK1" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" id="G4S-bC-ZuC"/>
                             <constraint firstItem="zGy-KZ-RK1" firstAttribute="trailing" secondItem="PQr-Ze-W5v" secondAttribute="trailing" id="N3m-Uy-j7d"/>
-                            <constraint firstItem="zGy-KZ-RK1" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" constant="10" id="sVA-o4-bKK"/>
+                            <constraint firstItem="zGy-KZ-RK1" firstAttribute="top" secondItem="PQr-Ze-W5v" secondAttribute="top" id="sVA-o4-bKK"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
                     </view>
@@ -50,7 +50,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1450" y="-322"/>
+            <point key="canvasLocation" x="1548" y="-322"/>
         </scene>
         <!--Recipe Details View Controller-->
         <scene sceneID="xKL-5k-P3f">
@@ -121,7 +121,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o9P-E6-EvK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2266" y="-322"/>
+            <point key="canvasLocation" x="2479" y="-322"/>
         </scene>
         <!--Timer-->
         <scene sceneID="wg7-f3-ORb">

@@ -22,6 +22,7 @@ class RecipeDetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Instructions"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -67,7 +68,7 @@ class RecipeDetailsViewController: UIViewController {
             if let image = response.result.value {
                 DispatchQueue.main.async {
                     self.recipeImage.image = image
-                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2, execute: {
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+1, execute: {
                         SwiftSpinner.hide()
                     })
                 }
