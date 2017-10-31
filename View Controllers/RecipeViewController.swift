@@ -17,12 +17,12 @@ class RecipeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Recipes"
+        self.navigationItem.title = "Recipes"
         self.setupTableView()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        self.title = ""
+        self.navigationItem.title = ""
     }
     
     override func viewDidAppear(_ animated: Bool) {

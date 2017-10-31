@@ -17,12 +17,13 @@ class RecipeDetailsViewController: UIViewController {
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var recipeInstructions: UILabel!
     @IBOutlet weak var instructionsHeight: NSLayoutConstraint!
+    @IBOutlet weak var recipeStackHeight: NSLayoutConstraint!
     
     var sentRecipe:Recipe!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Instructions"
+        self.navigationItem.title = "Instructions"
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,6 +40,12 @@ class RecipeDetailsViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(gotRecipeResponse), name: AppConstants.getRecipeNotification, object: nil)
     }
     
+    func getContentSize(_ textHeight:CGFloat) -> CGFloat{
+        let spacing:CGFloat = 20
+        return self.recipeTitle.bounds.height + spacing + self.recipeRating.bounds.height + spacing + self.recipeImage.bounds.height + spacing + textHeight
+        
+    }
+    
     @objc func gotRecipeResponse(notification: Notification){
         if let data = notification.userInfo{
             if let errorStatus = data["error"] as? Bool{
@@ -47,9 +54,11 @@ class RecipeDetailsViewController: UIViewController {
                         DispatchQueue.main.async {
                             self.recipeTitle.text = recipe.title
                             self.recipeRating.text = "Rating: \(recipe.rating!)"
-                            self.instructionsHeight.constant = recipe.instructions!.height(withConstrainedWidth: self.recipeInstructions.frame.width, font: self.recipeInstructions.font)
+                            let textHeight = recipe.instructions!.height(withConstrainedWidth: self.view.bounds.width-48, font: self.recipeInstructions.font)
+                            self.instructionsHeight.constant = textHeight
                             self.recipeInstructions.text = recipe.instructions!
                             self.getImageFromNet(recipe.image!)
+                            self.recipeStackHeight.constant = self.getContentSize(textHeight)
                         }
                     }
                 }else{
