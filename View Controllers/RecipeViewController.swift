@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftSpinner
 
 class RecipeViewController: UIViewController {
  
@@ -17,6 +18,12 @@ class RecipeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupTableView()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        SwiftSpinner.show("Gethering recipies...")
+        //Get Recipies
+        APIManager.shared.getRecipes()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,6 +45,10 @@ class RecipeViewController: UIViewController {
                         }
                         DispatchQueue.main.async {
                             self.recipeTableView.reloadData()
+                            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2, execute: {
+                                SwiftSpinner.hide()
+                            })
+                            
                         }
                     }
                 }else{
@@ -55,8 +66,6 @@ class RecipeViewController: UIViewController {
         self.recipeTableView.delegate = self
         self.recipeTableView.dataSource = self
         self.recipeTableView.reloadData()
-        //Get Recipies
-        APIManager.shared.getRecipes()
     }
 
     override func didReceiveMemoryWarning() {
@@ -64,7 +73,13 @@ class RecipeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let recipe = sender as? Recipe{
+            if let vc = segue.destination as? RecipeDetailsViewController{
+                vc.sentRecipe = recipe
+            }
+        }
+    }
 }
 
 extension RecipeViewController: UITableViewDelegate, UITableViewDataSource{
@@ -88,9 +103,7 @@ extension RecipeViewController: UITableViewDelegate, UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if let recipe = self.recipesArray.object(at: indexPath.row) as? Recipe{
-            print(recipe.id)
-            print(recipe.title)
-        
+            self.performSegue(withIdentifier: AppConstants.showDetailsVC, sender: recipe)
         }
         
         tableView.deselectRow(at: indexPath, animated: false)

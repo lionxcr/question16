@@ -8,6 +8,7 @@
 
 import Foundation
 import Alamofire
+import AlamofireImage
 
 struct APIManager {
     
@@ -43,16 +44,26 @@ struct APIManager {
             case .success(_):
                 if let data = response.result.value{
                     if let recipe = data as? [String:Any]{
+                        if let id = recipe["id"] as? Int{
+                            if let title = recipe["title"] as? String{
+                                if let rating = recipe["rating"] as? Double{
+                                    if let image = recipe["image"] as? String{
+                                        if let instructions = recipe["instructions"] as? String{
+                                            NotificationCenter.default.post(name: AppConstants.getRecipeNotification, object: nil, userInfo: ["recipe": Recipe(id:id, title:title, rating:rating, image:image, instructions: instructions), "error": false])
+                                        }
+                                    }
+                                }
+                            }
+                        }
                         
-                        NotificationCenter.default.post(name: AppConstants.getRecipiesNotification, object: nil, userInfo: ["recipies": "nil", "error": false])
                     }else{
-                        NotificationCenter.default.post(name: AppConstants.getRecipiesNotification, object: nil, userInfo: ["recipies": "nil", "error": true, "message": "unwrapping error"])
+                        NotificationCenter.default.post(name: AppConstants.getRecipeNotification, object: nil, userInfo: ["recipe": "nil", "error": true, "message": "unwrapping error"])
                     }
                 }else{
-                    NotificationCenter.default.post(name: AppConstants.getRecipiesNotification, object: nil, userInfo: ["recipies": "nil", "error": true, "message": "parsing error"])
+                    NotificationCenter.default.post(name: AppConstants.getRecipeNotification, object: nil, userInfo: ["recipe": "nil", "error": true, "message": "parsing error"])
                 }
             case .failure(let error):
-                NotificationCenter.default.post(name: AppConstants.getRecipiesNotification, object: nil, userInfo: ["recipies": "nil", "error": true, "message": error.localizedDescription])
+                NotificationCenter.default.post(name: AppConstants.getRecipeNotification, object: nil, userInfo: ["recipe": "nil", "error": true, "message": error.localizedDescription])
             }
             
         }

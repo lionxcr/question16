@@ -19,6 +19,7 @@
 		C57D15B21FA7D8B000DBFBF1 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D15B11FA7D8B000DBFBF1 /* APIManager.swift */; };
 		C57D15B41FA7DC0A00DBFBF1 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D15B31FA7DC0A00DBFBF1 /* RecipeModel.swift */; };
 		C57D15B61FA7E96E00DBFBF1 /* RecipeDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D15B51FA7E96E00DBFBF1 /* RecipeDetailsViewController.swift */; };
+		C57D15B81FA7F4B300DBFBF1 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C57D15B71FA7F4B300DBFBF1 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		C57D15B11FA7D8B000DBFBF1 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		C57D15B31FA7DC0A00DBFBF1 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		C57D15B51FA7E96E00DBFBF1 /* RecipeDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailsViewController.swift; sourceTree = "<group>"; };
+		C57D15B71FA7F4B300DBFBF1 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DB8721037DCE4C6A83532367 /* Pods-GorillaQuestion16.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaQuestion16.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaQuestion16/Pods-GorillaQuestion16.debug.xcconfig"; sourceTree = "<group>"; };
 		FE228385A72B3865C823C48E /* Pods-GorillaQuestion16.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GorillaQuestion16.release.xcconfig"; path = "Pods/Target Support Files/Pods-GorillaQuestion16/Pods-GorillaQuestion16.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -133,6 +135,7 @@
 				C57D15AE1FA7D11C00DBFBF1 /* Info.plist */,
 				C57D15A21FA7CD8F00DBFBF1 /* Default-568h@2x.png */,
 				C57D15AF1FA7D4C600DBFBF1 /* Constants.swift */,
+				C57D15B71FA7F4B300DBFBF1 /* Extensions.swift */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -244,10 +247,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-GorillaQuestion16/Pods-GorillaQuestion16-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftSpinner/SwiftSpinner.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSpinner.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -279,6 +286,7 @@
 				C57D15B21FA7D8B000DBFBF1 /* APIManager.swift in Sources */,
 				C57D158D1FA7CCDC00DBFBF1 /* TimerViewController.swift in Sources */,
 				C57D15891FA7CCDC00DBFBF1 /* AppDelegate.swift in Sources */,
+				C57D15B81FA7F4B300DBFBF1 /* Extensions.swift in Sources */,
 				C57D15B61FA7E96E00DBFBF1 /* RecipeDetailsViewController.swift in Sources */,
 				C57D158B1FA7CCDC00DBFBF1 /* RecipeViewController.swift in Sources */,
 				C57D15B01FA7D4C600DBFBF1 /* Constants.swift in Sources */,

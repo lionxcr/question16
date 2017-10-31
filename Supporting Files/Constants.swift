@@ -13,5 +13,6 @@ struct AppConstants {
     static let recipiesEndPoint = "http://gl-endpoint.herokuapp.com/recipes"
     static let recipeIDEndPoint = "http://gl-endpoint.herokuapp.com/recipes/"
     static let getRecipiesNotification = Notification.Name("GetAllRecipies")
+    static let getRecipeNotification = Notification.Name("GetRecipeByID")
     static let showDetailsVC = "ShowRecipeDetailsVC"
 }

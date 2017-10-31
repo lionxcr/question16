@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import SwiftSpinner
+import Alamofire
+import AlamofireImage
 
 class RecipeDetailsViewController: UIViewController {
     @IBOutlet weak var recipeTitle: UILabel!
@@ -15,10 +18,61 @@ class RecipeDetailsViewController: UIViewController {
     @IBOutlet weak var recipeInstructions: UILabel!
     @IBOutlet weak var instructionsHeight: NSLayoutConstraint!
     
+    var sentRecipe:Recipe!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        SwiftSpinner.show("Loading instructions...")
+        APIManager.shared.getRecipe(withID: self.sentRecipe.id)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.setupNotificaitonCenter()
+    }
+    
+    func setupNotificaitonCenter(){
+        NotificationCenter.default.removeObserver(self, name: AppConstants.getRecipeNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(gotRecipeResponse), name: AppConstants.getRecipeNotification, object: nil)
+    }
+    
+    @objc func gotRecipeResponse(notification: Notification){
+        if let data = notification.userInfo{
+            if let errorStatus = data["error"] as? Bool{
+                if !errorStatus{
+                    if let recipe = data["recipe"] as? Recipe{
+                        DispatchQueue.main.async {
+                            self.recipeTitle.text = recipe.title
+                            self.recipeRating.text = "Rating: \(recipe.rating!)"
+                            self.instructionsHeight.constant = recipe.instructions!.height(withConstrainedWidth: self.recipeInstructions.frame.width, font: self.recipeInstructions.font)
+                            self.recipeInstructions.text = recipe.instructions!
+                            self.getImageFromNet(recipe.image!)
+                        }
+                    }
+                }else{
+                    //handle errors
+                    if let message = data["message"] as? String{
+                        print(message)
+                    }
+                }
+            }
+            
+        }
+    }
+    
+    func getImageFromNet(_ url:String){
+        Alamofire.request(url).responseImage { response in
+            if let image = response.result.value {
+                DispatchQueue.main.async {
+                    self.recipeImage.image = image
+                    DispatchQueue.main.asyncAfter(deadline: DispatchTime.now()+2, execute: {
+                        SwiftSpinner.hide()
+                    })
+                }
+            }
+        }
     }
 
     override func didReceiveMemoryWarning() {
